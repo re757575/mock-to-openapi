@@ -42,6 +42,16 @@ properties:
           edit:
             type: boolean
             example: true
+        required:
+          - read
+          - write
+          - run
+          - edit
+    required:
+      - id
+      - name
+      - systemRole
+      - permissions
   address:
     type: object
     properties:
@@ -58,6 +68,11 @@ properties:
         type: integer
         format: int32
         example: 14000
+    required:
+      - street
+      - country
+      - city
+      - zip
   messages:
     type: array
     items:
@@ -68,5 +83,15 @@ properties:
           example: This is message
         type:
           type: string
-          format: byte
           example: info
+      required:
+        - message
+        - type
+required:
+  - name
+  - email
+  - phone
+  - tags
+  - role
+  - address
+  - messages

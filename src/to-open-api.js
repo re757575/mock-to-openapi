@@ -17,8 +17,10 @@ export function toOpenApi(item) {
 		case 'object':
 			oa.type = 'object';
 			oa.properties = {};
+			oa.required = [];
 			for (const [key, value] of Object.entries(item)) {
 				oa.properties[key] = toOpenApi(value);
+				oa.required.push(key);
 			}
 
 			break;

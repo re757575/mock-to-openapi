@@ -13,3 +13,8 @@ properties:
     type: string
     format: date-time
     example: 2020-05-12T23:50:21.817Z
+required:
+  - title
+  - author
+  - content
+  - date
